@@ -2,11 +2,33 @@
 
 namespace App\Controllers;
 
+use App\Models\UserModel;
+
 class Uas extends BaseController
 {
+    protected $uasModel;
+    public function __construct()
+    {
+        $this->uasModel = new UserModel();
+    }
+
+
+
     public function index()
     {
-        echo "Ini adalah Halaman Uas";
+        return view('Uas/index.php');
+        // cara konek ke database tanpa model
+        // $db = \Config\Database::connect();
+
+        $uasModel = new UserModel();
+        $uas = $uasModel->findAll();
+        dd($uas);
+    }
+
+    public function testDataBase()
+    {
+        $uas = $this->uasModel->findAll();
+        dd($uas);
     }
 
     public function coba()
@@ -20,12 +42,15 @@ class Uas extends BaseController
 
     public function login()
     {
+        return view('Uas/Login.php');
     }
 
     public function edit()
     {
+        return view('Uas/edit.php');
     }
-    public function home()
+    public function register()
     {
+        return view('Uas/register.php');
     }
 }
