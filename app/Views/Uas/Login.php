@@ -9,7 +9,7 @@ if (isset($_SESSION["login"])) {
         </script>";
 }
 
-// require "functions.php";
+require "functions.php";
 
 if (isset($_POST["login"])) {
     if (login($_POST) > 0) {
