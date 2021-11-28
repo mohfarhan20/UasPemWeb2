@@ -9,14 +9,14 @@ if (isset($_SESSION["login"])) {
         </script>";
 }
 
-require 'functions.php';
+// require "functions.php";
 
 if (isset($_POST["login"])) {
     if (login($_POST) > 0) {
         $_SESSION["username"] = $_POST['username'];
         $_SESSION["password"] = $_POST['password'];
         $_SESSION["login"] = true;
-        
+
         echo "
         <script>
         alert('Login succes');
@@ -39,15 +39,14 @@ if (isset($_POST["login"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Login AND Register</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
-    <link rel="stylesheet" href="assets/css/Account-setting-or-edit-profile.css">
-    <link rel="stylesheet" href="assets/css/Login-with-overlay-image.css">
-    <link rel="stylesheet" href="assets/css/Profile-with-data-and-skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <link rel="stylesheet" href=" <?= base_url(); ?>/assets/css/Account-setting-or-edit-profile.css">
+    <link rel="stylesheet" href=" <?= base_url(); ?>/assets/css/Login-with-overlay-image.css">
+    <link rel="stylesheet" href=" <?= base_url(); ?>/assets/css/Profile-with-data-and-skills.css">
     <style>
-    .container {
-        margin-top: 20px;
-    }
+        .container {
+            margin-top: 20px;
+        }
     </style>
 
 </head>
@@ -89,7 +88,7 @@ if (isset($_POST["login"])) {
                                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="img/gambarLogin.jpg" class="d-block w-100" alt="...">
+                                            <img src="<?= base_url(); ?>/assets/img/gambarLogin.jpg" class="d-block w-100" alt="...">
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>This beautiful theme yours!</h5>
                                                 <p>don't have a good day have a great day</p>
@@ -106,8 +105,7 @@ if (isset($_POST["login"])) {
                 </div>
                 <!-- end card -->
 
-                <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a href="register.php"
-                        class="text-primary ml-1">register</a></p>
+                <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a href="/Uas/register" class="text-primary ml-1">register</a></p>
 
                 <!-- end row -->
 
