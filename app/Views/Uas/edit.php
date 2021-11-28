@@ -10,7 +10,7 @@ if (!isset($_SESSION["login"])) {
 }
 
 
-require 'functions.php';
+require '/Uas/functions';
 $username = $_SESSION['username'];
 $user = query("SELECT * FROM user WHERE username = '$username'");
 
