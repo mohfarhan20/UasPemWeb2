@@ -7,6 +7,7 @@ use App\Models\UserModel;
 class Uas extends BaseController
 {
     protected $uasModel;
+
     public function __construct()
     {
         $this->uasModel = new UserModel();
@@ -20,9 +21,20 @@ class Uas extends BaseController
         // cara konek ke database tanpa model
         // $db = \Config\Database::connect();
 
-        $uasModel = new UserModel();
-        $uas = $uasModel->findAll();
-        dd($uas);
+
+    }
+
+    public function functions()
+    {
+        // Halaman menyimpan fungsi-fungsi yang akan dipakai
+        // dd($this->request->getVar());
+        $this->uasModel->save([
+            'Nama' => $this->request->getVar('nama'),
+            'Username' => $this->request->getVar('username'),
+            'Password' => $this->request->getVar('password'),
+            'Email' => $this->request->getVar('email'),
+        ]);
+        return redirect()->to('/Uas/index');
     }
 
     public function testDataBase()
