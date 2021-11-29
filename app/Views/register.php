@@ -1,29 +1,3 @@
-<?php
-session_start();
-
-if (isset($_SESSION["login"])) {
-    echo "
-        <script>
-            alert('Anda sudah login!');
-            document.location.href = 'index.php';
-        </script>";
-}
-
-require "functions.php";
-
-if (isset($_POST["register"])) {
-
-    if (registrasi($_POST) > 0) {
-        echo "<script>
-                alert('user baru berhasil ditambahkan');
-                </script>";
-    } else {
-        echo mysqli_error($conn);
-    }
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,7 +68,7 @@ if (isset($_POST["register"])) {
         <div class="box shadow">
             <h2>Fill the form registration below</h2>
 
-            <form action="/Uas/functions" method="POST">
+            <form action="/uas/login" method="">
                 <?= csrf_field(); ?>
                 <div class="mb-3 ">
                     <label for="nama" class="form-label">Nama</label>
@@ -116,7 +90,7 @@ if (isset($_POST["register"])) {
             </form>
         </div>
 
-        <p class="text-muted text-center mt-3 mb-0">Already hava an account?<a href="/Uas/login" class="text-primary ml-1">Login</a></p>
+        <p class="text-muted text-center mt-3 mb-0">Already hava an account?<a href="/uas/login" class="text-primary ml-1">Login</a></p>
 
     </div>
 

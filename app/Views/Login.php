@@ -1,36 +1,3 @@
-<?php
-session_start();
-
-if (isset($_SESSION["login"])) {
-    echo "
-        <script>
-            alert('Anda sudah login!');
-            document.location.href = 'index.php';
-        </script>";
-}
-
-require "functions.php";
-
-if (isset($_POST["login"])) {
-    if (login($_POST) > 0) {
-        $_SESSION["username"] = $_POST['username'];
-        $_SESSION["password"] = $_POST['password'];
-        $_SESSION["login"] = true;
-
-        echo "
-        <script>
-        alert('Login succes');
-        document.location.href = 'index.php'
-        </script>";
-    } else "
-        <script>
-        alert('Username/password salah');
-        </script>";
-}
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +36,7 @@ if (isset($_POST["login"])) {
                                     <p class="text-muted mt-2 mb-5">Enter your Username and password to access admin
                                         panel.</p>
 
-                                    <form action="" method="POST">
+                                    <form action="/" method="">
                                         <div class="form-group">
                                             <label for="username">Username</label>
                                             <input type="text" class="form-control" name="username" id="username">
@@ -105,7 +72,7 @@ if (isset($_POST["login"])) {
                 </div>
                 <!-- end card -->
 
-                <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a href="/Uas/register" class="text-primary ml-1">register</a></p>
+                <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a href="/uas/register" class="text-primary ml-1">register</a></p>
 
                 <!-- end row -->
 
