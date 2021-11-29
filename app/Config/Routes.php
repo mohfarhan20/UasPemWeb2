@@ -34,11 +34,6 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/uas', 'Uas::index');
 
-// $routes->get('/coba/index', 'Coba::index');
-// $routes->get('/coba/about', 'Coba::about');
-// $routes->get('/coba/(:any)/(:num)', 'Coba::about/$1/$2');
-// // $1 -> mengambil nilai dari placeholder yang pertama kali muncul
-// $routes->get('/user', 'Admin\Users::index');
 
 /*
  * --------------------------------------------------------------------

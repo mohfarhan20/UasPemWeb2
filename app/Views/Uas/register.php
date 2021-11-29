@@ -1,26 +1,25 @@
 <?php
 session_start();
 
-if (isset($_SESSION["login"])) {
-    echo "
-        <script>
-            alert('Anda sudah login!');
-            document.location.href = 'index.php';
-        </script>";
-}
+// if (isset($_SESSION["login"])) {
+//     echo "
+//         <script>
+//             alert('Anda sudah login!');
+//             document.location.href = 'index.php';
+//         </script>";
+// }
 
-require "functions.php";
 
-if (isset($_POST["register"])) {
+// if (isset($_POST["register"])) {
 
-    if (registrasi($_POST) > 0) {
-        echo "<script>
-                alert('user baru berhasil ditambahkan');
-                </script>";
-    } else {
-        echo mysqli_error($conn);
-    }
-}
+//     if (registrasi($_POST) > 0) {
+//         echo "<script>
+//                 alert('user baru berhasil ditambahkan');
+//                 </script>";
+//     } else {
+//         echo mysqli_error($conn);
+//     }
+// }
 
 ?>
 

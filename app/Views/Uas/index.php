@@ -1,14 +1,14 @@
 <?php
 
-session_start();
+// session_start();
 
-if (!isset($_SESSION["login"])) {
-    echo "
-        <script>
-            alert('Anda belum login! Silahkan login terlebih dahulu!');
-            document.location.href = 'login.php';
-        </script>";
-}
+// if (!isset($_SESSION["login"])) {
+//     echo "
+//         <script>
+//             alert('Anda belum login! Silahkan login terlebih dahulu!');
+//             document.location.href = 'login.php';
+//         </script>";
+// }
 
 require 'functions.php';
 foreach ($uas as $a) :
@@ -70,7 +70,7 @@ foreach ($uas as $a) :
                                                     }
                                                     ?>" alt="Admin" class="rounded-circle" width="150">
                                         <div class="mt-3">
-                                            <h4><?= $user["nama"] ?></h4>
+                                            <h4><?= $uas["nama"] ?></h4>
                                             <p class="text-secondary mb-1">Full Stack Developer</p>
                                             <p class="text-muted font-size-sm">Indonesia</p>
                                             <button class="btn btn-primary">Follow</button>

@@ -1,32 +1,31 @@
 <?php
 session_start();
 
-if (isset($_SESSION["login"])) {
-    echo "
-        <script>
-            alert('Anda sudah login!');
-            document.location.href = 'index.php';
-        </script>";
-}
+// if (isset($_SESSION["login"])) {
+//     echo "
+//         <script>
+//             alert('Anda sudah login!');
+//             document.location.href = 'index.php';
+//         </script>";
+// }
 
-require "functions.php";
 
-if (isset($_POST["login"])) {
-    if (login($_POST) > 0) {
-        $_SESSION["username"] = $_POST['username'];
-        $_SESSION["password"] = $_POST['password'];
-        $_SESSION["login"] = true;
+// if (isset($_POST["login"])) {
+//     if (login($_POST) > 0) {
+//         $_SESSION["username"] = $_POST['username'];
+//         $_SESSION["password"] = $_POST['password'];
+//         $_SESSION["login"] = true;
 
-        echo "
-        <script>
-        alert('Login succes');
-        document.location.href = 'index.php'
-        </script>";
-    } else "
-        <script>
-        alert('Username/password salah');
-        </script>";
-}
+//         echo "
+//         <script>
+//         alert('Login succes');
+//         document.location.href = 'index.php'
+//         </script>";
+//     } else "
+//         <script>
+//         alert('Username/password salah');
+//         </script>";
+// }
 
 
 ?>

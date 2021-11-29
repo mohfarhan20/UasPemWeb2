@@ -27,26 +27,9 @@ class Uas extends BaseController
     public function functions()
     {
         // Halaman menyimpan fungsi-fungsi yang akan dipakai
-
-        // return redirect()->to('/Uas/index');
-        // $data = [
-        //     'Nama ' => $this->request->getVar('nama'),
-        //     'Username' => $this->request->getVar('username'),
-        //     'Password' => $this->request->getVar('password'),
-        //     'No Hp' => $this->request->getVar('phone'),
-        //     'Alamat' => $this->request->getVar('address'),
-        //     'Github' => $this->request->getVar('github'),
-        //     'Twitter' => $this->request->getVar('twitter'),
-        //     'Instagram' => $this->request->getVar('instagram'),
-        //     'Facebook' => $this->request->getVar('facebook'),
-        //     'Gambar' => $this->request->getVar('gambar'),
-
-        // ];
         $uas = $this->uasModel->findAll();
-        $data = [
-            'uas' => $uas
-        ];
-        return view('Uas/index.php', $data);
+
+        return view('Uas/index.php', $uas);
     }
 
     public function testDataBase()
