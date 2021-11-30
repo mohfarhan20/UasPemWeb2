@@ -17,25 +17,40 @@ class Uas extends BaseController
 
     public function index()
     {
-        return view('index');
+        $data = [
+            'title' => 'Profil'
+        ];
+        return view('index', $data);
     }
 
     public function login()
     {
-        return view('login');
+        $data = [
+            'title' => 'Login'
+        ];
+        return view('login', $data);
     }
 
     public function logout()
     {
-        return view('login');
+        $data = [
+            'title' => 'Login'
+        ];
+        return view('login', $data);
     }
 
     public function edit()
     {
-        return view('edit');
+        $data = [
+            'title' => 'Edit'
+        ];
+        return view('edit', $data);
     }
     public function register()
     {
-        return view('register');
+        $data = [
+            'title' => 'Register'
+        ];
+        return view('register', $data);
     }
 }
