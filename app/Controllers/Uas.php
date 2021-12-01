@@ -14,6 +14,15 @@ class Uas extends BaseController
     }
 
 
+
+    public function index()
+    {
+        $data = [
+            'title' => 'Profil'
+        ];
+        return view('index', $data);
+    }
+
     public function login()
     {
         $data = [
