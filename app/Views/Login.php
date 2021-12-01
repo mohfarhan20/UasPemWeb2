@@ -1,6 +1,6 @@
-<?php
-session_start();
+<?= $this->extend('layout/template'); ?>
 
+<<<<<<< HEAD:app/Views/Uas/Login.php
 // if (isset($_SESSION["login"])) {
 //     echo "
 //         <script>
@@ -47,6 +47,14 @@ session_start();
             margin-top: 20px;
         }
     </style>
+=======
+<?= $this->Section('content'); ?>
+<style>
+    .container {
+        margin-top: 20px;
+    }
+</style>
+>>>>>>> refs/remotes/origin/main:app/Views/Login.php
 
 </head>
 
@@ -68,7 +76,7 @@ session_start();
                                     <p class="text-muted mt-2 mb-5">Enter your Username and password to access admin
                                         panel.</p>
 
-                                    <form action="" method="POST">
+                                    <form action="/" method="">
                                         <div class="form-group">
                                             <label for="username">Username</label>
                                             <input type="text" class="form-control" name="username" id="username">
@@ -104,7 +112,7 @@ session_start();
                 </div>
                 <!-- end card -->
 
-                <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a href="/Uas/register" class="text-primary ml-1">register</a></p>
+                <p class="text-muted text-center mt-3 mb-0">Don't have an account? <a href="/uas/register" class="text-primary ml-1">register</a></p>
 
                 <!-- end row -->
 
@@ -113,7 +121,4 @@ session_start();
         </div>
         <!-- Row -->
     </div><!-- End: Login with overlay image -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+    <?= $this->endSection(); ?>

@@ -6,7 +6,7 @@ class Coba extends BaseController
 {
     public function index()
     {
-        echo "Selamata datang admin ";
+        echo "Hello World fdf";
     }
 
     public function about($nama = ' ', $umur = 100)

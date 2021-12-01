@@ -15,49 +15,37 @@ class Uas extends BaseController
 
 
 
-    public function index()
-    {
-        return view('Uas/index.php');
-        // cara konek ke database tanpa model
-        // $db = \Config\Database::connect();
 
 
-    }
-
-    public function functions()
-    {
-        // Halaman menyimpan fungsi-fungsi yang akan dipakai
-        $uas = $this->uasModel->findAll();
-
-        return view('Uas/index.php', $uas);
-    }
-
-    public function testDataBase()
-    {
-        $uas = $this->uasModel->findAll();
-        dd($uas);
-    }
-
-    public function coba()
-    {
-        echo "Hello World ";
-    }
-    public function test()
-    {
-        return view('Uas/test.php');
-    }
 
     public function login()
     {
-        return view('Uas/Login.php');
+        $data = [
+            'title' => 'Login'
+        ];
+        return view('login', $data);
+    }
+
+    public function logout()
+    {
+        $data = [
+            'title' => 'Login'
+        ];
+        return view('login', $data);
     }
 
     public function edit()
     {
-        return view('Uas/edit.php');
+        $data = [
+            'title' => 'Edit'
+        ];
+        return view('edit', $data);
     }
     public function register()
     {
-        return view('Uas/register.php');
+        $data = [
+            'title' => 'Register'
+        ];
+        return view('register', $data);
     }
 }
