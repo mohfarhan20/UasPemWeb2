@@ -14,10 +14,6 @@ class Uas extends BaseController
     }
 
 
-
-
-
-
     public function login()
     {
         $data = [

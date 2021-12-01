@@ -1,35 +1,5 @@
 <?= $this->extend('layout/template'); ?>
 
-<<<<<<< HEAD:app/Views/Uas/Login.php
-// if (isset($_SESSION["login"])) {
-//     echo "
-//         <script>
-//             alert('Anda sudah login!');
-//             document.location.href = 'index.php';
-//         </script>";
-// }
-
-
-// if (isset($_POST["login"])) {
-//     if (login($_POST) > 0) {
-//         $_SESSION["username"] = $_POST['username'];
-//         $_SESSION["password"] = $_POST['password'];
-//         $_SESSION["login"] = true;
-
-//         echo "
-//         <script>
-//         alert('Login succes');
-//         document.location.href = 'index.php'
-//         </script>";
-//     } else "
-//         <script>
-//         alert('Username/password salah');
-//         </script>";
-// }
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,14 +17,13 @@
             margin-top: 20px;
         }
     </style>
-=======
-<?= $this->Section('content'); ?>
-<style>
-    .container {
-        margin-top: 20px;
-    }
-</style>
->>>>>>> refs/remotes/origin/main:app/Views/Login.php
+
+    <?= $this->Section('content'); ?>
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+    </style>
 
 </head>
 
