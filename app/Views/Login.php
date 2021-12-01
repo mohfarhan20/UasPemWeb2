@@ -1,29 +1,10 @@
 <?= $this->extend('layout/template'); ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Login AND Register</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
-    <link rel="stylesheet" href=" <?= base_url(); ?>/assets/css/Account-setting-or-edit-profile.css">
-    <link rel="stylesheet" href=" <?= base_url(); ?>/assets/css/Login-with-overlay-image.css">
-    <link rel="stylesheet" href=" <?= base_url(); ?>/assets/css/Profile-with-data-and-skills.css">
-    <style>
-        .container {
-            margin-top: 20px;
-        }
-    </style>
-
-    <?= $this->Section('content'); ?>
-    <style>
-        .container {
-            margin-top: 20px;
-        }
-    </style>
+<?= $this->Section('content'); ?>
+<style>
+    .container {
+        margin-top: 20px;
+    }
+</style>
 
 </head>
 
@@ -55,7 +36,7 @@
                                             <input type="password" class="form-control" name="password" id="password">
                                         </div>
                                         <button type="submit" name="login" class="btn btn-theme">Login</button>
-                                        <a href="#l" class="forgot-link float-right text-primary">Forgot password?</a>
+                                        <a href="#" class="forgot-link float-right text-primary">Forgot password?</a>
                                     </form>
                                 </div>
                             </div>
