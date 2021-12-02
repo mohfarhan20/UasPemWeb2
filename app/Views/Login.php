@@ -26,7 +26,7 @@
                                     <p class="text-muted mt-2 mb-5">Enter your Username and password to access admin
                                         panel.</p>
 
-                                    <form action="/" method="">
+                                    <form action="/Uas/login_validation" method="">
                                         <div class="form-group">
                                             <label for="username">Username</label>
                                             <input type="text" class="form-control" name="username" id="username">
