@@ -6,11 +6,11 @@ use App\Models\UserModel;
 
 class Uas extends BaseController
 {
-    protected $uasModel;
+    protected $userModel;
 
     public function __construct()
     {
-        $this->uasModel = new UserModel();
+        $this->userModel = new UserModel();
     }
 
 
