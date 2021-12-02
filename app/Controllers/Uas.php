@@ -13,6 +13,11 @@ class Uas extends BaseController
         $this->userModel = new UserModel();
     }
 
+    public function login_validation()
+    {
+        return "Test";
+    }
+
 
 
     public function index()
