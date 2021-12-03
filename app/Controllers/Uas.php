@@ -13,10 +13,34 @@ class Uas extends BaseController
         $this->userModel = new UserModel();
     }
 
+
     public function login_validation()
     {
-        return "Test";
+        $username = $this->request->getPost('username');
+        $password = $this->request->getPost('password');
+
+        $cek = $this->userModel->login_validation($username, $password);
+        if ($cek) {
+
+
+            // session()->set('username', $cek['username']);
+
+
+            $data = $this->userModel->find($username);
+            dd($data['username']);
+
+            return redirect()->to('Uas/index');
+        } else {
+
+
+            session()->setFlashdata('Username atau Password Salah');
+
+
+            return redirect()->to('Uas/login');
+        }
     }
+
+
 
 
 
