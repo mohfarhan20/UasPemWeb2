@@ -19,30 +19,23 @@ class Uas extends BaseController
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
 
-        $cek = $this->userModel->login_validation($username, $password);
-        if ($cek) {
-
-
+        $cek = $this->userModel->login_validation($username);
+        if(password_verify($password,$cek['password'])){
+            echo nl2br(" VERIFIED \n nuser = " . $username . "\n pw = " . $password . "\n pw di db = " . $cek['password']);
+        } else {
+            echo " UNVERIFIED ";
+        }
+        dd($cek)
+;        if ($cek) {
             // session()->set('username', $cek['username']);
-
-
-            $data = $this->userModel->find($username);
-            dd($data['username']);
-
+            $data = $this->userModel->findAll();
+            dd($data);
             return redirect()->to('Uas/index');
         } else {
-
-
             session()->setFlashdata('Username atau Password Salah');
-
-
             return redirect()->to('Uas/login');
         }
     }
-
-
-
-
 
     public function index()
     {

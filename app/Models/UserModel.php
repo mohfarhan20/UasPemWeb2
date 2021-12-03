@@ -13,10 +13,8 @@ class UserModel extends Model
     protected $allowedFields = ['nama', 'username', 'password', 'email', 'phone', 'address', 'github', 'twitter', 'instagram', 'facebook', 'gambar'];
 
 
-    public function login_validation($username, $password)
+    public function login_validation($username)
     {
-        return $this->table('user')->like('username', $username)->like('password', $password);
-        //         ->where(array('username' => $username, 'password' => $password))
-        //         ->get()->getRowArray();
+        return $this->table('user')->where('username',$username)->get()->getRowArray();
     }
 }
