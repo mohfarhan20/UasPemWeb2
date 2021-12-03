@@ -26,7 +26,16 @@
                                     <p class="text-muted mt-2 mb-5">Enter your Username and password to access admin
                                         panel.</p>
 
-                                    <form action="/Uas/login_validation" method="">
+
+                                    <?php if (!empty(session()->getFlashdata('warning'))) { ?>
+                                        <div class="alert alert-warning">
+                                            <?php echo session()->getFlashdata('gagal'); ?>
+                                        </div>
+                                    <?php } ?>
+
+
+
+                                    <form action="/uas/login_validation" method="POST">
                                         <div class="form-group">
                                             <label for="username">Username</label>
                                             <input type="text" class="form-control" name="username" id="username">
@@ -35,9 +44,12 @@
                                             <label for="password">Password</label>
                                             <input type="password" class="form-control" name="password" id="password">
                                         </div>
-                                        <button type="submit" name="login" class="btn btn-theme">Login</button>
+                                        <button type="submit" class="btn btn-theme">Login</button>
                                         <a href="#" class="forgot-link float-right text-primary">Forgot password?</a>
                                     </form>
+                                    <?php
+
+                                    ?>
                                 </div>
                             </div>
 
