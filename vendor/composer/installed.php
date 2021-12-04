@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'fe17eb45c3b1e15d469dfe094e6c78036934178d',
+        'reference' => NULL,
         'name' => 'codeigniter4/appstarter',
         'dev' => true,
     ),
     'versions' => array(
         'codeigniter4/appstarter' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'fe17eb45c3b1e15d469dfe094e6c78036934178d',
+            'reference' => NULL,
             'dev_requirement' => false,
         ),
         'codeigniter4/authentication-implementation' => array(
@@ -101,12 +101,12 @@
             'dev_requirement' => false,
         ),
         'nikic/php-parser' => array(
-            'pretty_version' => 'v4.13.1',
-            'version' => '4.13.1.0',
+            'pretty_version' => 'v4.13.2',
+            'version' => '4.13.2.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../nikic/php-parser',
             'aliases' => array(),
-            'reference' => '63a79e8daa781cac14e5195e63ed8ae231dd10fd',
+            'reference' => '210577fe3cf7badcc5814d99455df46564f3c077',
             'dev_requirement' => true,
         ),
         'phar-io/manifest' => array(
@@ -173,12 +173,12 @@
             'dev_requirement' => true,
         ),
         'phpunit/php-file-iterator' => array(
-            'pretty_version' => '3.0.5',
-            'version' => '3.0.5.0',
+            'pretty_version' => '3.0.6',
+            'version' => '3.0.6.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpunit/php-file-iterator',
             'aliases' => array(),
-            'reference' => 'aa4be8575f26070b100fccb67faabb28f21f66f8',
+            'reference' => 'cf1c2e7c203ac650e352f4cc675a7021e7d1b3cf',
             'dev_requirement' => true,
         ),
         'phpunit/php-invoker' => array(

@@ -1,4 +1,6 @@
-<?php namespace Myth\Auth\Database\Migrations;
+<?php
+
+namespace Myth\Auth\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
@@ -14,6 +16,14 @@ class CreateAuthTables extends Migration
             'email'            => ['type' => 'varchar', 'constraint' => 255],
             'username'         => ['type' => 'varchar', 'constraint' => 30, 'null' => true],
             'password_hash'    => ['type' => 'varchar', 'constraint' => 255],
+            'nama'             => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
+            'phone'            => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
+            'address'          => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
+            'github'           => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
+            'twitter'          => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
+            'instagram'        => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
+            'facebook'         => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
+            'gambar'           => ['type' => 'varchar', 'constraint' => 255, 'default' => 'default.jpg'],
             'reset_hash'       => ['type' => 'varchar', 'constraint' => 255, 'null' => true],
             'reset_at'         => ['type' => 'datetime', 'null' => true],
             'reset_expires'    => ['type' => 'datetime', 'null' => true],
@@ -166,7 +176,7 @@ class CreateAuthTables extends Migration
 
     public function down()
     {
-		// drop constraints first to prevent errors
+        // drop constraints first to prevent errors
         if ($this->db->DBDriver != 'SQLite3') // @phpstan-ignore-line
         {
             $this->forge->dropForeignKey('auth_tokens', 'auth_tokens_user_id_foreign');
@@ -178,15 +188,15 @@ class CreateAuthTables extends Migration
             $this->forge->dropForeignKey('auth_users_permissions', 'auth_users_permissions_permission_id_foreign');
         }
 
-		$this->forge->dropTable('users', true);
-		$this->forge->dropTable('auth_logins', true);
-		$this->forge->dropTable('auth_tokens', true);
-		$this->forge->dropTable('auth_reset_attempts', true);
+        $this->forge->dropTable('users', true);
+        $this->forge->dropTable('auth_logins', true);
+        $this->forge->dropTable('auth_tokens', true);
+        $this->forge->dropTable('auth_reset_attempts', true);
         $this->forge->dropTable('auth_activation_attempts', true);
-		$this->forge->dropTable('auth_groups', true);
-		$this->forge->dropTable('auth_permissions', true);
-		$this->forge->dropTable('auth_groups_permissions', true);
-		$this->forge->dropTable('auth_groups_users', true);
-		$this->forge->dropTable('auth_users_permissions', true);
+        $this->forge->dropTable('auth_groups', true);
+        $this->forge->dropTable('auth_permissions', true);
+        $this->forge->dropTable('auth_groups_permissions', true);
+        $this->forge->dropTable('auth_groups_users', true);
+        $this->forge->dropTable('auth_users_permissions', true);
     }
 }
