@@ -6,11 +6,13 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        $data['title'] = 'LOGIN';
+        return view('auth/login', $data);
     }
 
-    public function coba()
+    public function register()
     {
-        echo "Hello World ";
+        $data['title'] = 'REGISTER';
+        return view('auth/register', $data);
     }
 }
