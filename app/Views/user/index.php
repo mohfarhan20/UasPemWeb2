@@ -29,10 +29,10 @@
                             <div class="card-body">
                                 <div class="d-flex flex-column align-items-center text-center">
                                     <div class="user-avatar">
-                                        <img src="<?= base_url(); ?>/img/<?= user()->gambar; ?>" alt="Admin" class="rounded-circle" width="110">
+                                        <img src="<?= base_url(); ?>/img/<?= user()->gambar; ?>" alt="Admin" class="rounded-circle" width="150">
                                     </div>
                                     <div class="mt-3">
-                                        <h4>@<?= user()->username; ?></h4>
+                                        <h4>@<?= user()->nama; ?></h4>
                                         <p class="text-secondary mb-1"> Full Stack Developer</p>
                                         <p class="text-muted font-size-sm"> Indonesia</p>
                                         <button class="btn btn-primary"> Follow</button>
