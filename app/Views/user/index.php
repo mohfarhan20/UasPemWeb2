@@ -32,7 +32,7 @@
                                         <img src="<?= base_url(); ?>/img/<?= user()->gambar; ?>" alt="Admin" class="rounded-circle" width="150">
                                     </div>
                                     <div class="mt-3">
-                                        <h4>@<?= user()->nama; ?></h4>
+                                        <h4><?= user()->nama; ?></h4>
                                         <p class="text-secondary mb-1"> Full Stack Developer</p>
                                         <p class="text-muted font-size-sm"> Indonesia</p>
                                         <button class="btn btn-primary"> Follow</button>
@@ -76,7 +76,7 @@
                                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                             </svg>Instagram</h6>
-                                        <a href="https://instagram.com/<?= user()->instagram; ?>" target="_blank">
+                                        <a href="https://instagram.com/<?= user()->instagram; ?>/" target="_blank">
                                             <span class="text-secondary">
                                                 <?= user()->instagram; ?>
                                             </span>
